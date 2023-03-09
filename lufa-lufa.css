@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg ,rgba(243, 192, 41,1), rgba(30, 30, 30, 1));
+  overflow: hidden;
+}
+#castelo{
+  position: absolute;
+  opacity: 0.3;
+  filter: grayscale(1);
+  width: 100%;
+  height: 700px;
+  margin-top: -190px;
+}
+#imgLogo{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  width: 150px;
+  margin-left: 180px; 
+  margin-top: -110px;
+}
+h1{
+  position: relative;
+  display: block;
+  color: #D7C69C;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(30, 30, 30, 0.9);
+  font-family: 'Griffy';
+  font-size: 60px;
+  margin-bottom: 55px;
+}
+#voltar{
+  position: absolute;
+  width: 100px;
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 150px;
+}
+#voltar:hover{
+  transform: scale(1.2);
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.9);
+  font-size: 30px;
+  font-family: 'Griffy';
+  color: #D7C69C;
+  text-align: center;
+  padding: 10px;
+  margin: 18px -10px -45px -10px;
+}
+#pontos, #vidas{
+  position: inline-block;
+  display: inline-flex;
+}
+
+.memory-game {
+  width: 680px;
+  height: 415px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 20px;
+  border: 15px solid black;
+  box-shadow: 5px 10px 25px black;
+}
+
+.memory-card {
+  width: 120px;
+  height: 180px;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.memory-card:hover{
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px rgba(0,0,0,.8);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  backface-visibility: hidden;
+  
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+
+/* @media (max-width: 768px) */
